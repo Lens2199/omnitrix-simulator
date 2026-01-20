@@ -1,0 +1,82 @@
+{
+  "aliens": [
+    {
+      "id": "heatblast",
+      "name": "Heatblast",
+      "species": "Pyronite",
+      "homeWorld": "Pyros",
+      "firstAppearance": "And Then There Were 10",
+      "description": "Heatblast is a magma-based lifeform who can generate and manipulate intense heat and fire from his body.",
+      "stats": {
+        "power": 85,
+        "speed": 60,
+        "durability": 70,
+        "intelligence": 50,
+        "skill": 65
+      },
+      "abilities": [
+        "Pyrokinesis (fire control)",
+        "Heat generation",
+        "Fire projectiles",
+        "Limited flight via fire propulsion",
+        "Fire absorption"
+      ],
+      "weaknesses": [
+        "Water and fire extinguishing substances",
+        "Can be extinguished if exposed to enough water"
+      ]
+    },
+    {
+      "id": "four-arms",
+      "name": "Four Arms",
+      "species": "Tetramand",
+      "homeWorld": "Khoros",
+      "firstAppearance": "Washington B.C.",
+      "description": "Four Arms is a hulking, four-armed powerhouse with incredible strength capable of creating shockwaves.",
+      "stats": {
+        "power": 95,
+        "speed": 40,
+        "durability": 90,
+        "intelligence": 40,
+        "skill": 60
+      },
+      "abilities": [
+        "Super strength",
+        "Enhanced durability",
+        "Sonic clap shockwave",
+        "Enhanced jumping"
+      ],
+      "weaknesses": [
+        "Relatively slow",
+        "Large size makes him an easy target"
+      ]
+    },
+    {
+      "id": "xlr8",
+      "name": "XLR8",
+      "species": "Kineceleran",
+      "homeWorld": "Kinet",
+      "firstAppearance": "And Then There Were 10",
+      "description": "XLR8 is a velociraptor-like alien with extreme speed, capable of running faster than 500 mph.",
+      "stats": {
+        "power": 45,
+        "speed": 100,
+        "durability": 40,
+        "intelligence": 65,
+        "skill": 80
+      },
+      "abilities": [
+        "Super speed (500+ mph)",
+        "Enhanced reflexes",
+        "Sharp claws",
+        "Prehensile tail",
+        "Wall running"
+      ],
+      "weaknesses": [
+        "Low durability",
+        "Magnets can affect his speed",
+        "Needs room to accelerate"
+      ]
+    }
+  ]
+}

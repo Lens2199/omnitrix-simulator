@@ -1,9 +1,12 @@
+import AlienInfoCard from './components/AlienInfoCard/AlienInfoCard'
+import aliens from './data/aliens.json'
+
 function App() {
   return (
 
     <div>
       <h1>Omnitrix Simulator</h1>
-      <p>It's hero time! </p>
+       <AlienInfoCard alien={aliens.aliens[0]} />
     </div>
   )
 }
