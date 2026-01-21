@@ -1,3 +1,4 @@
+import Omnitrix from './components/Omnitrix/Omnitrix'
 import AlienInfoCard from './components/AlienInfoCard/AlienInfoCard'
 import aliens from './data/aliens.json'
 
@@ -6,6 +7,7 @@ function App() {
 
     <div>
       <h1>Omnitrix Simulator</h1>
+       <Omnitrix />
        <AlienInfoCard alien={aliens.aliens[0]} />
     </div>
   )
