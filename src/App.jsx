@@ -7,7 +7,7 @@ function App() {
 
     <div>
       <h1>Omnitrix Simulator</h1>
-       <Omnitrix />
+       <Omnitrix aliens={aliens.aliens} />
        <AlienInfoCard alien={aliens.aliens[0]} />
     </div>
   )

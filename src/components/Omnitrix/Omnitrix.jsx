@@ -1,7 +1,9 @@
-function Omnitrix({alien }) {
+import AlienDial from "./AlienDial";
+
+function Omnitrix({aliens }) {
   return (
     <div>
-        <h1>Omnitrix dial coming soon</h1>
+        <AlienDial aliens={aliens} />
     </div>
     )
 }
