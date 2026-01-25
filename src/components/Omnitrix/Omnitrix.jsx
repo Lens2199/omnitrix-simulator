@@ -10,10 +10,14 @@ import AlienInfoCard from "../AlienInfoCard/AlienInfoCard";
 function Omnitrix({ aliens  }) {
 
 const [selectedAlien, setSelectedAlien] = useState(null);
+const [transformedAlien, setTransformedAlien] = useState(null);
 
 function handleAlienSelect(alien) {
-    console.log("Selected:", alien.name);
     setSelectedAlien(alien);
+}
+
+function handleTransform() {
+    setTransformedAlien(selectedAlien);
 }
 
   return (
@@ -30,8 +34,10 @@ function handleAlienSelect(alien) {
        {!selectedAlien && <p>No alien selected.</p>}
        {selectedAlien && <p>Selected alien: {selectedAlien.name}</p>}
 
-       
-        {selectedAlien && <AlienInfoCard alien={selectedAlien} />}
+
+        {transformedAlien && <AlienInfoCard alien={transformedAlien} />}
+        <button onClick={handleTransform} disabled={!selectedAlien}>Transform!</button>
+
     </div>
   );
 }
