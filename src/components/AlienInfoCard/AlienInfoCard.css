@@ -1,0 +1,27 @@
+.alien-info-card {
+  background-color: #0a0a0a;
+  border: 2px solid #00ff00;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px 0;
+  color: #fff;
+}
+
+.alien-info-card h2 {
+  color: #00ff00;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.alien-info-card p {
+  margin: 8px 0;
+}
+
+.alien-info-card ul {
+  color: #ccc;
+  margin: 10px 0 10px 20px;
+}
+
+.alien-info-card li {
+  margin: 5px 0;
+}

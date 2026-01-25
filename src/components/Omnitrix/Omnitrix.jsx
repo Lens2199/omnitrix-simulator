@@ -1,46 +1,49 @@
-import { useState } from "react";
-// Import the AlienDial component so we can use it inside Omnitrix
-import AlienDial from "./AlienDial";
-import AlienInfoCard from "../AlienInfoCard/AlienInfoCard";
-// Omnitrix is a parent component
-// It receives an array of aliens as a prop
+import { useState } from "react"
+import AlienDial from "./AlienDial"
+import AlienInfoCard from "../AlienInfoCard/AlienInfoCard"
+import './Omnitrix.css'
+/**
+ * Omnitrix
+ * Purpose: Controller component — owns state and coordinates UI.
+ */
+function Omnitrix({ aliens }) {
+  const [selectedAlien, setSelectedAlien] = useState(null)       // Dialed-in alien
+  const [transformedAlien, setTransformedAlien] = useState(null) // Confirmed transformation
 
+  function handleAlienSelect(alien) {
+    setSelectedAlien(alien)   // Update selected alien from AlienDial
+  }
 
-
-function Omnitrix({ aliens  }) {
-
-const [selectedAlien, setSelectedAlien] = useState(null);
-const [transformedAlien, setTransformedAlien] = useState(null);
-
-function handleAlienSelect(alien) {
-    setSelectedAlien(alien);
-}
-
-function handleTransform() {
-    setTransformedAlien(selectedAlien);
-}
+  function handleTransform() {
+    setTransformedAlien(selectedAlien)   // Lock in transformation
+  }
 
   return (
-    // Wrapper div for the Omnitrix UI
-    <div>
+  <div className="omnitrix">
+    <AlienDial
+      aliens={aliens}
+      onAlienSelect={handleAlienSelect}
+      selectedAlien={selectedAlien}
+    />
 
-      {/*
-        We pass the `aliens` prop down to AlienDial
-        This is called "props drilling" (parent → child)
-      */}
-      <AlienDial 
-      aliens={aliens} 
-      onAlienSelect={handleAlienSelect} />
-       {!selectedAlien && <p>No alien selected.</p>}
-       {selectedAlien && <p>Selected alien: {selectedAlien.name}</p>}
+    {/* Render message when no alien is selected */}
+    {!selectedAlien && <p className="display-screen">No alien selected.</p>}
 
+    {/* Show currently selected alien */}
+    {selectedAlien && <p className="display-screen">Selected alien: {selectedAlien.name}</p>}
 
-        {transformedAlien && <AlienInfoCard alien={transformedAlien} />}
-        <button onClick={handleTransform} disabled={!selectedAlien}>Transform!</button>
+    {/* Show alien details only after transformation */}
+    {transformedAlien && <AlienInfoCard alien={transformedAlien} />}
 
-    </div>
-  );
+    {/* Disable button until an alien is selected */}
+    <button
+       className="transform-btn"
+      onClick={handleTransform}
+      disabled={!selectedAlien}
+    >
+      Transform!
+    </button>
+  </div>
+)
 }
-
-// Export so Omnitrix can be used in App or other components
-export default Omnitrix;
+export default Omnitrix

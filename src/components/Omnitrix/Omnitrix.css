@@ -1,0 +1,43 @@
+.omnitrix {
+  background-color: #1a1a1a;
+  border: 3px solid #00ff00;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.display-screen {
+  background-color: #000;
+  color: #00ff00;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.transform-btn {
+  background-color: #00ff00;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.transform-btn:hover {
+  background-color: #00cc00;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+.transform-btn:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
