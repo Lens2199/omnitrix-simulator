@@ -20,11 +20,13 @@ function Omnitrix({ aliens }) {
 
   return (
   <div className="omnitrix">
-    <AlienDial
+    <div className="watch-face"><AlienDial
       aliens={aliens}
       onAlienSelect={handleAlienSelect}
       selectedAlien={selectedAlien}
     />
+</div>
+    
 
     {/* Render message when no alien is selected */}
     {!selectedAlien && <p className="display-screen">No alien selected.</p>}
